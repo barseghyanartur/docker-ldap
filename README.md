@@ -14,8 +14,8 @@ docker build \
 Run the container entering your LDAP account credentials:
 ```$xslt
 docker run \
-    -p 3000 \
-    -n ldap_demo \
+    -p 3000:80 \
+    --name ldap_demo \
     -e LDAP_BIND_ON='"CN=example,OU=example,DC=example"' \
     -e LDAP_PASSWORD='"my_ldap_password"' \
     -e LDAP_URL='"my_ldap_url"' \
